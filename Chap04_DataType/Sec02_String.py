@@ -7,7 +7,7 @@ print("Hello World")
 print('Python is fun')
 print("""Life is too short, You need python""")
 print('''Life is too shor, You need python''')
-print()
+print("")
 """
 여러 줄 짜리 문자열 처리
 
@@ -83,7 +83,7 @@ Python is fun!
 print("=" * 50)
 print("My Program")
 print("=" * 50)
-print()
+print("")
 """
 인덱싱과 슬라이싱
 
@@ -201,7 +201,7 @@ print(a[:])
 print(a[:17])
 print(a[19:])
 print(a[19:-7])
-print()
+print("")
 """
 자주 사용되는 슬라이싱 예
 
@@ -247,7 +247,7 @@ print()
 """
 a = "Pithon"
 print(a[:1] + 'y' + a[2:])
-print()
+print("")
 """
     문자열 포매팅(Formatting)
 
@@ -305,7 +305,7 @@ Todays rate is 3.234
 """
 print("%10s" % "hi")
 print("%-10sjane." % 'hi')
-print()
+print("")
 """
     예 2) 소숫점 표현
     
@@ -324,7 +324,7 @@ print()
 """
 print("%0.4f" % 3.42134234)
 print("%10.4f" % 3.42134234)
-print()
+print("")
 """
 ############################## 문자열 관련 메소드 ##############################
     소문자를 대문자로 바꾸기(upper)
@@ -348,7 +348,7 @@ print(a)
 print(a.upper())
 print(a.lower())
 print(a.swapcase())
-print()
+print("")
 """
     문자 갯수 세기(count)
     
@@ -360,7 +360,7 @@ print()
 a = "hobby"
 print(a)
 print(a.count('b'))
-print()
+print("")
 """
     위치 알려주기1(find)
     
@@ -381,10 +381,10 @@ print()
 a = "Python is best choice"
 print(a)
 print(a.find('b'))
-print(a.find('z'))
+print(a.find('z')) # 없으면 -1
 print(a.index('b'))
-#print(a.index('z')) #error
-print()
+#print(a.index('z')) # 없으면 error
+print("")
 """
 문자열 삽입 (join)
 
@@ -395,7 +395,7 @@ print()
 """
 a = ","
 print(a.join('abcd'))
-print()
+print("")
 """
 왼쪽 공백 지우기 (lstrip)
 
@@ -423,7 +423,7 @@ print(a)
 print(a.lstrip())
 print(a.rstrip())
 print(a.strip())
-print()
+print("")
 """
 문자열 바꾸기 (replace)
 
@@ -435,7 +435,7 @@ replace(바뀌게 될 문자열, 바꿀 문자열)처럼 사용해서 문자열 
 a = "Life is too short"
 a = a.replace("Life", "Your leg")
 print(a)
-print()
+print("")
 """
 문자열 나누기 (split)
 

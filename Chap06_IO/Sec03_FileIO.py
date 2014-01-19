@@ -52,10 +52,10 @@ f = open("newfile", 'r')
 while 1: 
 	line = f.readline()
 	if not line: break 
-	print(line, end='')
+	print(line),
 
 f.close()
-print()
+print("")
 """
 
 	두 번째 방법 : f.readlines()
@@ -67,10 +67,10 @@ f = open("newfile", 'r')
 lines = f.readlines() # 리스트로 반환
 
 for line in lines: 
-	print(line, end='')
+	print(line),
 
 f.close()
-print()
+print("")
 """
 	[“1 번째 줄입니다.”,“2 번째 줄입니다.”, , , “10 번째 줄입니다.”]
 """"""
@@ -84,10 +84,10 @@ print()
 f = open("newfile", 'r') 
 data = f.read()
 
-print(data, end='') 
+print(data), 
 
 f.close()
-print()
+print("")
 """
 	f.read()는 파일을 전부 읽은 문자열을 돌려준다. 따라서 위의 예의 data는 파일의 전체내용이다.
 
@@ -133,16 +133,16 @@ print(f.tell())
 처음에 파일을 읽기 모드로 열었고, 그 파일 포인터 값을 알기 위해서 tell을 호출하였다.
 물론 파일의 맨 처음이기 때문에 0을 반환했다.
 """
-print(f.readline(), end='')
+print(f.readline()),
 print(f.tell()) 
 """
 17
 다음에 한 줄을 읽는다. 그 다음의 파일 포인터는 그 줄의 바이트 수만큼 포인터가 증가한다.
 따라서 다시 tell을 호출했을 때 17이 된 것이다.
 """
-print(f.readline(), end='')
+print(f.readline()),
 print(f.tell()) 
-print()
+print("")
 """
 26
 마찬가지로 다시 한 줄을 읽었더니 파일 포인터의 위치는 26이 되었다.
@@ -153,8 +153,8 @@ print()
 	# f.seek()
 
 f.seek(0)
-print(f.readline(), end='')
-print()
+print(f.readline()),
+print("")
 """
 	파일 포인터의 값을 변화시키기 위해서 seek를 사용하였다.
 	f.seek(0)는 파일 포인터의 위치를 0으로 하라는 것이다.
@@ -172,7 +172,7 @@ import sys
 args = sys.argv[1:] 
 for i in args: 
 	print(i)
-print()
+print("")
 # argv[0] : 파일 이름, argv[1]부터 인수
 """
 	C:/Python>python sys1.py aaa bbb ccc
@@ -192,8 +192,8 @@ print()
 #import sys
 args = sys.argv[1:]
 for i in args: 
-	print(i.upper(), end=' ')
-print()
+	print(i.upper()),
+print("")
 """
 C:/Python> python sys2.py life is too short, you need python
 결과값:

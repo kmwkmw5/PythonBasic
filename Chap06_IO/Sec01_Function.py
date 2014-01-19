@@ -2,48 +2,6 @@
 """
 1) 함수
 
-	파이썬 함수의 구조
-	
-def 함수명(입력 인수):
-    <수행할 문장1>
-    <수행할 문장2>
-    ...
-
-가장 간단하지만 많은 것을 설명해 주는 다음의 예를 보도록 하자.
-
-def sum(a, b): 
-    return a + b
-
-위와 같이 sum함수를 먼저 만들자.
-
->>> a = 3 
->>> b = 4 
->>> c = sum(a, b) 
->>> print(c)
-7
-""""""
-
-함수의 입력값과 리턴값
-
-	평범한 함수(입력값, 리턴값이 있는 함수)
-"""
-def sum(a, b): 
-	result = a + b 
-	return result
-
-a = sum(3, 4) 
-print(a)
-"""
-
-	입력값이 없는 함수
-"""
-def say(): 
-	return 'Hi'
-
-a = say() 
-print(a)
-"""
-
 	리턴값이 없는 함수
 """
 def printSum(a, b): 
@@ -55,14 +13,6 @@ print(a)
 	sum함수처럼 돌려주는 값이 없을 때 a = sum(3, 4)처럼 쓰게 되면 함수 sum은 돌려주는 값으로
 	a변수에 None을 돌려주게 된다. 그렇다고 이것이 돌려주는 값이 있다는 걸로 생각하면 곤란하다.
 """"""
-
-	입력값도 리턴값도 없는 함수
-"""
-def printSay(): 
-	print('Hi')
-printSay()
-print()
-"""
 
 		입력값이 몇 개가 될 지 모를 때는 어떻게 해야 할까?
 	
@@ -86,7 +36,7 @@ print(result)
 
 result = sum_many(1,2,3,4,5,6,7,8,9,10) 
 print(result)
-print()
+print("")
 """
 	위에서 만든 sum_many라는 함수는 입력값이 몇 개든지 상관이 없다.
 	그 이유는 args라는 변수가 입력값들을 전부 모아서 터플로 만들어 주기 때문이다.
@@ -115,7 +65,7 @@ print(result)
 
 result = sum_mul('mul', 1,2,3,4,5) 
 print(result)
-print()
+print("")
 """
 함수의 리턴값은 언제나 하나이다.
 
@@ -129,7 +79,7 @@ print(a)
 
 s, m = sum_and_mul(3, 4) # 두 개의 변수로도 받을 수 있다.
 print("%d %d" % (s,m))
-print()
+print("")
 """
 	리턴값은 a+b와 a*b 두 개인데 리턴값을 받아들이는 변수는 a 하나만 쓰였으니 에러가 나지 않을까? 당연한 의문이다.
 	하지만 에러는 나지 않는다. 그 이유는 리턴값이 두 개가 아니라 하나라는 데 있다. 함수의 리턴값은 터플값 하나로 돌려주게 된다.
@@ -173,7 +123,7 @@ def say_myself(name, old, sex=1):
 		print("여자입니다.")
 		
 say_myself("김민우", 23)
-print()
+print("")
 """
 
 		함수 입력값 초기치 설정시 주의사항

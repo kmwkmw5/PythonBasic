@@ -18,7 +18,7 @@ for mark in marks: # mark 자체가 element
 		print("%d번 학생은 합격입니다." % number)
 	else: 
 		print("%d번 학생은 불합격입니다." % number)
-print()
+print("")
 """
 
 	for와 continue
@@ -32,7 +32,7 @@ for mark in marks:
 	number = number +1 
 	if mark < 60: continue 
 	print("%d번 학생 축하합니다. 합격입니다. " % number)
-print()
+print("")
 """
 
 		for와 range함수
@@ -77,7 +77,7 @@ sum = 0
 for i in range(1, 11):	# 1~10까지의 합
 	sum = sum + i
 print(sum)
-print()
+print("")
 """
 또한 우리가 앞서 살펴 보았던 60점 이상이면 합격인 예제도 range함수를 이용해서 적용시킬 수도 있다. 다음을 보자.
 
@@ -88,7 +88,7 @@ marks = [90, 25, 67, 45, 80]
 for number in range(len(marks)): # 0~marks의 길이(5) : 0~4
 	if marks[number] < 60: continue 
 	print("%d번 학생 축하합니다. 합격입니다." % (number+1))
-print()
+print("")
 # len()이라는 함수가 처음 나왔는데 len함수는 리스트의 요소 개수를 돌려주는 함수이다.
 """
 
@@ -110,7 +110,7 @@ b = [[1,2], [3,4], [5,6]]
 for [x, y] in b: # (x, y) 무관
 	print(x + y)
 
-print()
+print("")
 """
 
 	for와 range를 이용한 구구단
@@ -133,8 +133,8 @@ for와 range함수를 이용하면 단 4줄만으로 구구단을 출력해 볼 
 """
 for i in range(1,10):
 	for j in range(2,10):
-		print("%d * %d = %d" % (j, i, i*j), end="\t")    # print("", end="")
-	print()
+		print ("%d * %d = %d\t" % (j, i, i*j)),    # print("", end=""), python3!!!
+	print("")
 """
 위에서 print(i*j, end=" "), 처럼 end 파라미터를 넣어준 이유는
 해당 결과값을 출력할 때 다음 줄로 넘어가지 않고 그 줄에 계속해서 출력하기 위한 것이다.

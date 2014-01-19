@@ -72,7 +72,7 @@ number = 0;	# 초기화하지 않고 사용하면 에러가 남
 while number != 4:
 	print(prompt)
 	number = int(input()) # input() : 사용자의 입력을 받음
-print()
+print("")
 """
 
 	while문 빠져 나가기(break)

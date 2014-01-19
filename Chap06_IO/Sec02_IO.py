@@ -15,7 +15,8 @@ Life is too short, you need python
 >>>
 input은 입력되는 모든 것을 문자열로 취급한다.
 """
-a = input()
+temp = 'abcd'
+a = raw_input()
 print(a)
 """
 
@@ -50,7 +51,7 @@ life is too short
 """
 print("life" "is" "too short")		# 띄어쓰기 안됌
 print("life" + "is" + "too short")	# 띄어쓰기 안됌
-print("life","is","too short")		# ,로 띄어쓰기
+print "life","is","too short"		# ,로 띄어쓰기
 """
 
 	한 줄에 출력하기
@@ -63,4 +64,4 @@ print("life","is","too short")		# ,로 띄어쓰기
 0 1 2 3 4 5 6 7 8 9
 """
 for i in range(10):
-	print(i, end=' ')
+	print(i),

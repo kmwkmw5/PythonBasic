@@ -18,7 +18,7 @@ Key이용하여 Value얻기
 grade = {'pey': 10, 'julliet': 99}
 print(grade['pey'])
 print(grade['julliet'])
-print()
+print("")
 """
 몇가지 예를 더 보도록 하자.
 
@@ -36,7 +36,7 @@ print()
 a = {1:'a', 2:'b'}
 print(a[1])
 print(a[2])
-print()
+print("")
 """
 >>> a = {'a':1, 'b':2}
 >>> a['a']
@@ -96,7 +96,7 @@ print(a)
 #4
 del a[1]
 print(a)
-print()
+print("")
 """
 	딕셔너리 주의사항
 	
@@ -133,7 +133,7 @@ print()
 """
 a = {(1,2) : 'hi', (3,4) : 'c'}
 print(a)
-print()
+print("")
 """
 ############################## 딕셔너리 관련 메소드 ##############################
 딕셔너리를 자유자재로 사용하기 위해 딕셔너리가 자체적으로 가지고 있는 관련 함수들을 사용해 보도록 하자.
@@ -176,7 +176,7 @@ for k in a.keys():
 	print(k)
 
 print(list(a.keys()))
-print()
+print("")
 """
 	Value리스트 만들기 (values)
 	
@@ -193,7 +193,7 @@ for v in a.values():
 	print(v)
 
 print(list(a.values()))
-print()
+print("")
 """
 	Key, Value 쌍 얻기(items)
 	
@@ -208,7 +208,7 @@ for [k,v] in a.items():	#(k,v)도 가능
 	print(k + ':' + v)
 
 print(list(a.items()))
-print()
+print("")
 """
 	Key: Value 쌍 모두 지우기(clear)
 	
@@ -220,7 +220,7 @@ print()
 """
 a.clear()
 print(a)
-print()
+print("")
 """
 	Key로 Value얻기 (get)
 	
@@ -242,7 +242,7 @@ print()
 a = {'name':'pey', 'phone':'0119993323', 'birth': '1118'}
 print(a.get('name'))
 print(a.get('foo', 'bar'))
-print()
+print("")
 """
 해당 Key가 있는지 조사 (in)
 

@@ -80,7 +80,7 @@ a[3]는 리스트 a의 네 번째 요소를 나타내기 때문에 마지막 요
 """
 a = [1, 2, ['a', 'b', ['Life', 'is']]]
 print(a[2][2][0])
-print()
+print("")
 """
 	리스트의 슬라이싱 알아보기
 문자열에서와 마찬가지로 리스트에서도 슬라이싱 기법이 적용된다.
@@ -120,7 +120,7 @@ a[0]에서 a[2]까지의 값 즉, ['a', 'b']를 나타내는 리스트가 된다
 """
 a = [1, 2, 3, ['a', 'b', 'c'], 4, 5]
 print(a[3][:2])
-print()
+print("")
 """
 	리스트를 더하고(+) 반복하기(*)
 
@@ -148,7 +148,7 @@ a = [1, 2, 3]
 b = [4, 5, 6]
 print(a + b)
 print(a*3)
-print()
+print("")
 """
 	리스트의 수정 변경과 삭제
 
@@ -204,7 +204,7 @@ print(a)
 #4
 del a[1]
 print(a)
-print()
+print("")
 
 #2-참고
 a = [1, 2, 3]
@@ -214,7 +214,7 @@ print(a)
 b = [1, 2, 3]
 b[1:2] = ['a', 'b', 'c']
 print(b)
-print()
+print("")
 """
 	del 객체
 	(참고 - 객체란 파이썬에서 사용되는 모든 자료형을 말한다.)
@@ -267,7 +267,7 @@ print(a)
 a = ['a', 'c', 'b']
 a.sort()
 print(a)
-print()
+print("")
 """
 	리스트 뒤집기(reverse)
 	
@@ -283,7 +283,7 @@ print()
 a = ['a', 'c', 'b']
 a.reverse()
 print(a)
-print()
+print("")
 """
 	위치 반환 (index)
 	
@@ -308,7 +308,7 @@ print()
 a = [1,2,3]
 print(a.index(3))
 #print(a.index(0)) # error
-print()
+print("")
 """
 	갯수세기 (count)
 	
@@ -321,7 +321,7 @@ print()
 """
 a = [1,2,3,1]
 print(a.count(1))
-print()
+print("")
 """
 
 	리스트 확장(extend)
@@ -357,7 +357,7 @@ a = [1, 2, 3]
 a.append(4)
 a.append([5,6])
 print(a)
-print()
+print("")
 """
 	리스트에 요소 삽입 (insert)
 	
@@ -376,7 +376,7 @@ print()
 a = [1,2,3]
 a.insert(0, 4)
 print(a)
-print()
+print("")
 """
 	리스트 요소 제거 (remove)
 	
@@ -397,7 +397,7 @@ a.remove(3)
 print(a)
 a.remove(3)
 print(a)
-print()
+print("")
 """
 	리스트 요소 끄집어내기(pop)
 	
@@ -425,4 +425,4 @@ a.pop()
 print(a)
 a.pop(1)
 print(a)
-print()
+print("")

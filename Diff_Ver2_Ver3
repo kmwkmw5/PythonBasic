@@ -1,0 +1,45 @@
+1. 한글 입력
+	- Python 2.7
+		기본 입력: ascii -> utf-8로 변경(또는 설정파일 수정)
+		# -*- coding:utf-8 -*-
+		
+	- Python 3.3
+		기본 입력: utf-8(그대로 사용하면 됨)
+		
+	- 해결 방안
+		Python 2.7 에서 첫 줄에 주석 추가
+		
+		
+2. print문의 사용법
+	- Python 2.7
+		1) print 내용 또는 print(내용) : 내용 출력 후 개행
+		2) print 내용, 또는 print(내용), : 내용 출력 후 개행하지 않고 한 칸 띄어쓰기 추가
+		3) print() : () 출력 후 개행
+		
+	- Python 3.3
+		1) print(내용) : 내용 출력 후 개행
+		2) print(내용, end="뒷내용") : 내용 출력 후 개행하지 않고 end의 뒷내용이 추가
+		3) print() : 빈 문자열 출력 후 개행
+		
+	- 해결 방안
+		python2와 python3을 완벽 호환되게 작성하기는 어려움
+		각 버전에 맞게 사용
+		
+3. inpnut()의 사용
+	- Python 2.7
+		1) input() : 숫자의 입력을 받음.(또는 기존에 정의된 변수의 이름을 받아 사용할 수도 있음)
+		2) raw_input() : 문자열의 입력을 받음.
+		
+	- Python 3.3
+		1) input() : 입력을 받음(숫자든 문자든) (raw_input은 사용 불가능)
+		
+3. Dictionary의 메소드 관련(.keys(), .values(), .items())
+	- Python 2.7
+		리스트로 반환
+	
+	- Python 3.3
+		각각 dict_keys, dict_values, ditc_items로 반환
+		
+	- 해결방안
+		리스트이든 dict_이든 둘다 반복문 사용이 가능하기 때문에 그대로 사용하면 됨
+		만약 python3에서 리스트형태로 사용하고 싶다면 list(a.keys())와 같이 변환해서 사용

@@ -57,13 +57,13 @@ if money >= 3000 or watch:
 	print("택시를 타고 가라")
 else:
 	print("걸어가라")
-print()
+print("")
 
 if not watch:
 	print("시계가 없네")
 else:
 	print("시계가 있네")
-print()
+print("")
 """
 
 		in, not in
@@ -103,7 +103,7 @@ print()
 print(1 in [1,2,3])
 print(1 not in [1,2,3])
 print('a' in ('a','b','c'))
-print()
+print("")
 """
 
 	elif (다중 조건 판단)

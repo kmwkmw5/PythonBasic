@@ -54,7 +54,7 @@ print(0o177)
 print(0O177)
 print(0x8ff)
 print(0X8ff)
-print()
+print("")
 """
     복소수 (Complex number)
 
@@ -95,7 +95,7 @@ print(b.imag)
 print(a.conjugate())
 print(abs(a))
 print(a+b)
-print()
+print("")
 """
 숫자 연산
 프로그래밍을 한번도 해 본적이 없는 독자라도 사칙연산(+, -, *, /)은 알고 있을 것이다.
