@@ -1,3 +1,4 @@
+# -*- coding:utf-8 -*-
 """
 5) 딕셔너리 (Dictionary)
 
