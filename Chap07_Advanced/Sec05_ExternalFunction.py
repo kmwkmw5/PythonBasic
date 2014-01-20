@@ -53,7 +53,7 @@ print('')
 """""""""""""""""""""
 ####################
 #import io			# ver3
-#import StringIO	# ver2
+import StringIO	# ver2
 ####################
 """""""""""""""""""""
 
@@ -61,15 +61,13 @@ print('')
 							  단 실제 파일객체는 아니고 흉내를 낼 뿐이다.
 	
 """
-#ver3
-#f = io.StringIO()
-#f.write("life is too short")
-#value = f.getvalue()
-#print(value)
-#f.close()
-
-#ver2
-#http://blog.naver.com/zerosum99?Redirect=Log&logNo=120194448399 좀 어려운듯...
+#f = io.StringIO()	# ver3
+f = StringIO.StringIO()
+f.write("life is too short")
+value = f.getvalue()
+print(value)
+f.close()
+print('')
 """
 
 """""""""""""""""""""
