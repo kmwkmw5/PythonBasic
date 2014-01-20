@@ -20,7 +20,7 @@ class Animal:
 	def setKind(self, kind):
 		self.kind = kind
 	def bark(self):
-		pass
+		raise NotImplementedError
 		
 class Dog(Animal):
 	kind = 'Dog'
