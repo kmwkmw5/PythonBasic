@@ -32,8 +32,9 @@ class Cat(Animal):
 	def bark(self):
 		print('meow meow')
 		
-doggy = Dog('doggy')
-catty = Cat('catty')
-
-doggy.bark()
-catty.bark()
+if __name__ == '__main__' :
+	doggy = Dog('doggy')
+	catty = Cat('catty')
+	
+	doggy.bark()
+	catty.bark()
