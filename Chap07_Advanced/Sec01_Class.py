@@ -1,6 +1,5 @@
 # -*- coding:utf-8 -*-
 class Animal:
-	kind = 'undefined'
 	def __init__(self, name):
 		self.name = name
 	def __del__(self):
@@ -23,12 +22,16 @@ class Animal:
 		raise NotImplementedError
 		
 class Dog(Animal):
-	kind = 'Dog'
+	def __init__(self, name):
+		Animal.__init__(self, name)
+		self.kind = 'dog'
 	def bark(self):
 		print('wal wal')
 	
 class Cat(Animal):
-	kind = 'Cat'
+	def __init__(self, name):
+		Animal.__init__(self, name)
+		self.kind = 'cat'
 	def bark(self):
 		print('meow meow')
 		

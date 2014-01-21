@@ -57,6 +57,27 @@ print(eval('divmod(4,3)'))
 print('')
 """
 
+	str(object) : 객체를 출력할 수 있는 문자열 형태로 변환하여 돌려주는 함수이다.
+					단 문자열 그 자체로만 돌려주는 함수이다. 위의 repr함수와의 차이점을 살펴보자.
+
+"""
+print(str(3))
+print(str('hi'))
+print(str('hi'.upper()))
+print('')
+"""
+
+	repr(object) : 객체를 출력할 수 있는 문자열 형태로 변환하여 돌려주는 함수이다.
+			이 변환된 값은 주로 eval 함수의 입력으로 쓰인다. str 함수와의 차이점이라면
+			str으로 변환된 값은 eval의 입력값이 될 수 없는 경우가 있다는 것이다.
+
+"""
+print(repr('hi'.upper()))
+print(eval(repr('hi'.upper())))
+#print(eval(str('hi'.upper()))) # error
+print('')
+"""
+
 	hex(x) : 입력으로 정수값을 받아서 그 값을 십육진수값(hexadecimal)로 변환하여 돌려주는 함수이다.
 
 """
@@ -260,27 +281,6 @@ print(range(5))
 print(range(5, 10))
 print(range(1, 10, 2))
 print(range(0, -10, -1))
-print('')
-"""
-
-	str(object) : 객체를 출력할 수 있는 문자열 형태로 변환하여 돌려주는 함수이다.
-					단 문자열 그 자체로만 돌려주는 함수이다. 위의 repr함수와의 차이점을 살펴보자.
-
-"""
-print(str(3))
-print(str('hi'))
-print(str('hi'.upper()))
-print('')
-"""
-
-	repr(object) : 객체를 출력할 수 있는 문자열 형태로 변환하여 돌려주는 함수이다.
-			이 변환된 값은 주로 eval 함수의 입력으로 쓰인다. str 함수와의 차이점이라면
-			str으로 변환된 값은 eval의 입력값이 될 수 없는 경우가 있다는 것이다.
-
-"""
-print(repr('hi'.upper()))
-print(eval(repr('hi'.upper())))
-#print(eval(str('hi'.upper()))) # error
 print('')
 """
 
