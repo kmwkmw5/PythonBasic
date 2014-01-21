@@ -1,11 +1,19 @@
 # -*- coding:utf-8 -*-
 import sys;
 
+def usage():
+	print("""
+Usage
+======
+python %s originFileName copyFileName
+""" % (sys.argv[0]))
+
+
 try:
 	originFileName = sys.argv[1];
 	copyFileName = sys.argv[2];
 except:
-	print('Usage: python copy.py originFileName copyFileName')
+	usage()
 	exit()
 
 try:
