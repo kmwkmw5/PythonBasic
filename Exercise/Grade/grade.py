@@ -19,6 +19,9 @@ class InvalidScoreError(Exception):
 
 class Score:
 	def __init__(self, *scores):
+		# scores가 만약 한 개의 리스트의 형태로 입력되었다면
+		if isinstance(scores[0], list):
+			scores = scores[0]
 		# 각 점수를 0으로 초기화
 		self.subject = { 'korean': 0, 'english': 0, 'math': 0 }
 		self.subjectNum = len(self.subject)
@@ -110,20 +113,34 @@ class Class:
 if __name__ == '__main__':
 	# pyClass 학급 생성
 	pyClass = Class()
+	
 	# py_student 파일로부터 학생 정보를 읽어옴
 	try:
 		fPyClass = open('py_student', 'r')
 	except IOError:
 		print('학생 정보를 py_student 입력해 주세요.')
 		exit()
+		
 	# 학생 정보를 읽어 pyClass 학급에 등록
-	lines = fPyClass.readlines()
-	for line in lines:
-		line = line.replace('\n', '')
-		info = line.split(',')
-		student = Student(int(info[0]), info[1], Score(int(info[2]), int(info[3]), int(info[4])))
-		pyClass.addStudent(student)
-	fPyClass.close()
+	try:
+		lines = fPyClass.readlines()
+		for line in lines:
+			line = line.replace('\n', '')
+			info = line.split(',')
+			# 임시 student 딕셔너리 생성
+			dic_student = {}
+			(dic_student['id'], dic_student['name']) = int(info.pop(0)), info.pop(0)
+			#dic_student['score'] = [int(score) for score in info]
+			#dic_student['score'] = list(map(int, info))
+			dic_student['score'] = list(map(lambda s: int(s), info))
+			# 학생 추가
+			student = Student(dic_student['id'], dic_student['name'], Score(dic_student['score']))
+			pyClass.addStudent(student)
+	except ValueError:
+		print('입력 방법: 번호(int),이름(string),성적1(int),성적2(int),성적3(int)')
+		exit()
+	finally:
+		fPyClass.close()
 	'''
 	pyClass.addStudent(
 		Student(1, '학생일', Score(55, 66, 80)),
