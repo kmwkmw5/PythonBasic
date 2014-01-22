@@ -454,6 +454,8 @@ a = "Life is too short"
 print(a.split())
 a = "a:b:c:d"
 print(a.split(':'))
+print(a.split(':',1))
+print(a.split(':',2))
 """
 위에서 소개한 문자열 관련 함수들은 문자열 처리에서 매우 사용 빈도가 높은 것들이고 유용한 것들이다.
 이 외에도 몇 가지가 더 있지만 자주 사용되는 것들은 아니다.

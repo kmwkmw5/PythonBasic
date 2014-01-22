@@ -44,9 +44,8 @@ f = open("newfile", 'r')
 line = f.readline() # 첫 줄 read
 print(line)
 f.close()
-"""
-	만약 모든 라인을 읽어서 화면에 출력하고 싶다면 다음과 같은 프로그램을 작성해야 한다.
-"""
+
+	# 만약 모든 라인을 읽어서 화면에 출력하고 싶다면 다음과 같은 프로그램을 작성해야 한다.
 f = open("newfile", 'r')
 
 while 1: 
@@ -56,6 +55,15 @@ while 1:
 
 f.close()
 print("")
+
+	# 다른 방법
+print('###########다른 방법############')
+f = open("newfile", 'r')
+for line in f:
+	print(line),
+f.close()
+print("")
+
 """
 
 	두 번째 방법 : f.readlines()
