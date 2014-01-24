@@ -37,3 +37,6 @@ nosetests.xml
 
 # eclipse
 .settings
+.gitignore
+Bible/src/ch02/out.txt
+Bible/src/ch02/output.txt
