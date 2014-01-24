@@ -40,3 +40,5 @@ nosetests.xml
 .gitignore
 Bible/src/ch02/out.txt
 Bible/src/ch02/output.txt
+Bible/Chap02_Basic/out.txt
+Bible/Chap02_Basic/output.txt
