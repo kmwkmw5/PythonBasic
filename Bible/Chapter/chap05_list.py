@@ -16,7 +16,8 @@
 # 큐   .append(data), .pop(0)
 #===============================================================================
 
-#http://docs.python.org/3.3/tutorial/datastructures.html#more-on-lists
+# http://docs.python.org/3.3/tutorial/datastructures.html#more-on-lists
+# http://docs.python.org/3.3/library/stdtypes.html#mutable-sequence-types
 
 #===============================================================================
 # 5.4 리스트에 튜플이나 리스트(복합 자료형)가 있을 때 반복 참조하기
