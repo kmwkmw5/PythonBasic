@@ -51,8 +51,7 @@ if __name__ == '__main__':
 
 #------------------------------------------------------------------------------ 
 # 문자열로 표현된 모듈을 가져오기
-modulename = 're'
-re = __import__(modulename)
+re = __import__('re')
 print(re)
 #<module 're' from 'C:\\Python33\\lib\\re.py'>
 #------------------------------------------------------------------------------ 
@@ -86,7 +85,7 @@ print(heapq)
 print(heapq.tee([1,2,3]))
 #(<itertools._tee object at 0x0000000002950808>, <itertools._tee object at 0x00000000028478C8>)
 
-# sys.modules[__name__]
+# sys.modules[__name__] : 현재 모듈(__main__)
 current_module = sys.modules[__name__]
 print(current_module)
 #<module '__main__' from 'C:\\App\\PythonBasic\\Bible\\Chapter\\chap12_module_package.py'>
