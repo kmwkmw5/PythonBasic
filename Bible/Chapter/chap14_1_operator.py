@@ -417,26 +417,101 @@ del a.x
 # 14.1.7 인스턴스 객체 호출하기 : __call__()
 #===============================================================================
 
+#------------------------------------------------------------------------------ 
+# __call__() 메소드가 있으면 그 클래스의 인스턴스는 함수처럼 사용할 수 있다.
+class Factorial:
+	def __init__(self):
+		self.cache = {}
+	def __call__(self, n):
+		if n not in self.cache:
+			if n==0:
+				self.cache[n] = 1
+			else:
+				self.cache[n] = n * self.__call__(n-1)
+		return self.cache[n]
+fact = Factorial()
+for i in range(10):
+	print(fact(i))
 
+# 호출 가능한지 확인하기 : collections.Callable
+import collections
+print(isinstance(fact, collections.Callable))
+#True
+#------------------------------------------------------------------------------ 
 
+#===============================================================================
+# 14.1.8 인스턴스 객체 생성하기 : __new__()
+#===============================================================================
 
+#------------------------------------------------------------------------------ 
+# 싱글톤(Singleton)에서 활용
+# 정적 메소드, 객체의 생성을 제어함
 
+# 일반 예제
+class NewTest:
+	def __new__(cls, *args, **kw):
+		print("__new__ called", cls)
+		instance = object.__new__(cls)
+		return instance
+	def __init__(self, *args, **kw):
+		print("__init__ called", self)
+t = NewTest()
+#__new__ called <class '__main__.NewTest'>
+#__init__ called <__main__.NewTest object at 0x25b51d0>
 
+# 싱글톤 예제
+class Singleton:
+	__instance = None
+	def __new__(cls, *args, **kw):
+		if cls.__instance is None:
+			cls.__instance = object.__new__(cls)
+		return cls.__instance
+class Sub(Singleton):
+	pass
+s1 = Sub()
+s2 = Sub()
+print(s1 is s2)
+#True
+#------------------------------------------------------------------------------ 
 
+#===============================================================================
+# 14.1.9 with 문 구현하기
+#===============================================================================
 
+#------------------------------------------------------------------------------ 
+# __enter__(), __exit__()
+# __enter__()에서 리턴값 -> as 변수명에 치환
 
+# 임계 영역(Critical Section)을 구현하는 예제
+import threading
+class Locked:
+	def __init__(self, lock):
+		self.lock = lock
+	def __enter__(self):
+		print('__enter__', self)
+		self.lock.acquire()
+	def __exit__(self, type, value, tb):
+		print('__exit__', self)
+		self.lock.release()
+lock = threading.Lock()
+with Locked(lock):
+	print('I am in C.S.')
+#__enter__ <__main__.Locked object at 0x2603dd0>
+#I am in C.S.
+#__exit__ <__main__.Locked object at 0x2603dd0>
 
+# 장식자와 생성자를 이용한 문맥 관리 객체를 구현하는 예제(위와 동일한 예제)
+from contextlib import contextmanager
+import threading
 
+@contextmanager
+def Locked2(lock):
+	lock.acquire()
+	yield lock
+	lock.release()
 
-
-
-
-
-
-
-
-
-
-
-
-
+lock = threading.Lock()
+with Locked2(lock):
+	print('I am in C.S.')
+#I am in C.S.
+#------------------------------------------------------------------------------ 
